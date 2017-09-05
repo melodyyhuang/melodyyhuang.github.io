@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Melody Y. Huang</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:300, 400, 500, 600, 700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <style>
+  body {
+      font-family: 'Zilla Slab', serif;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      color: #807F84;
+      font-weight: 300;
+  }
+
+  strong{
+  	color: #000000;
+  	font-weight: 400;
+  }
+
+  h3 {
+      margin: 0px 0 0px 0;
+      letter-spacing: 2px;      
+      font-size: 20px;
+      color: #111;
+      font-family: 'Zilla Slab', serif;
+  }
+
+  h4 {
+      margin: 0px 0 0px 0;
+      letter-spacing: 2px;      
+      font-size: 17px;
+      color: #111;
+      font-family: 'Zilla Slab', serif;;
+  }
+
+  body{
+  	padding-top: 90px;
+  }
+
+  .container-fluid {
+  	padding-top: 60px; 
+  	padding-left: 80px;
+  	padding-right: 80px;
+      text-align: left;
+  }
+
+  .top-buffer { margin-top:90px; }
+  .top-buffer2 { margin-top:50px; }
+
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+
+  .navbar {
+      font-family: 'Zilla Slab', serif;
+      font-weight: 500 !important;
+      margin-bottom: 0;
+      margin-top: 0;
+      border: 0;
+      background-color: #fff;
+      font-size: 12px !important;
+      letter-spacing: 3.8px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #45618E !important;
+  }
+  .navbar-nav li a:hover {
+      color: #8BC8E8 !important; /*light blue*/ 
+  }
+
+  .navbar-default li.active a {
+      color: #29292c;
+      background-color: #fff;
+  }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+ a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  /*BACKGROUND color for active*/
+  background-color: white;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-nav>.active>a:hover, .navbar-nav>.active>a:focus {
+  font-weight: 800;
+}
+
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+
+  footer {
+      background-color: #fff;
+      color: #45618E;
+      padding-bottom: 10px;
+      padding-left: 20px;
+  }
+  footer a {
+      color: #000000;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }  
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+
+  .material-icons, .icon-text {
+      vertical-align: text-bottom;
+    }
+
+  .vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
+
+  .borderexample
+  {
+    border-style:solid;
+    border-width:1px;
+    border-color:#000;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  img.hover-shadow {
+    transition: 0.3s
+  }
+
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05)
+    -webkit-transform:scale(1.19); /* Safari and Chrome */
+    -moz-transform:scale(1.19); /* Firefox */
+    -ms-transform:scale(1.19); /* IE 9 */
+    -o-transform:scale(1.19); /* Opera */
+     transform:scale(1.19);
+  }
+
+  div{
+    max-width: 1300px;
+  }
+
+  </style>
+</head>
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Melody Y. Huang</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#research">RESEARCH</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#publications">PUBLICATIONS</a></li>
+        <li><a href=https://www.dropbox.com/s/bsj1hlmrq3ftxpc/MelodyHuang_CV.pdf?dl=0>CV</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Container (First Portion) -->
+<div class="container-fluid top-buffer2">
+<div class = 'row-fluid'>
+<div class="col-xs-12 col-sm-3 col-md-offset-1">
+<h3>+ Welcome!</h3>
+</div>
+
+<div class="col-xs-12 col-sm-8">
+<div class = 'row'>
+<div class = 'col-sm-2 img-circle vcenter'> 
+<img src="images/DSC_6778.jpg" class="ratio img-circle" width=170>
+</div><!--
+--><div class = 'col-sm-7 col-md-offset-2 vcenter'>
+<p><strong>Hi, my name is Melody!</strong></p>
+<p>Attempting to measure life with <a href="https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock">coffee spoons</a> and a lot of big data.</p>
+<p><a href="mailto:m.huang@ucla.edu"><i class="material-icons" style='font-size:20px'>mail_outline</i></a> Email: m.huang [<strong>asperand</strong>] ucla.edu</p>
+</div>
+</div>
+
+<br />
+<h4><u>About Me</u> </h4>
+<p>I currently work as a <strong>Quantitative Researcher</strong> at a hedge fund based in Santa Monica called <strong>Almitas Capital</strong>. I&#8217;m also working on several research projects at UCLA with <a href="http://www.econ.ucla.edu/rrojas/"><strong>Prof. Randall R. Rojas</strong></a> and <strong>Prof. Patrick D. Convery</strong>. Our previous projects have drawn on methods from different disciplines, such as statistics, economics, and physics, to explain inefficiencies within financial markets.</p>
+
+<p>I graduated from <strong>UCLA</strong> in June 2017, with a B.S. in <strong>Mathematics/Economics</strong> and a <strong>specialization in computing</strong>. I spent my last year of college as a <strong>Research Fellow</strong> through the Department of Economics, where I worked on modeling stock market movements through the use of Google searches as a proxy for large-scale investor behavior. During the summer of 2015, I studied abroad at the <strong>London School of Economics</strong>.</p>
+
+<p>As an undergrad, I tutored for UCLA&#8217;s <strong>Masters of Applied Economics program</strong>, where I helped graduate students with<strong> programming</strong>, <strong>econometrics</strong>, and <strong>machine learning</strong>. I also taught <strong>multivariable calculus</strong> at UCLA&#8217;s <strong>Academic Advancement Program</strong> for three years.</p>
+
+<p>I spend most of my days on <strong>R</strong> or <strong>Python</strong>. I also use Matlab, Java, C++, and Stata.</p>
+
+<p>Other things I like (in no particular order): photography, colors (mainly shades of blue and gray), straight lines, music, and elegant math proofs.</p>
+</div>
+</div>
+</div>
+
+<div id = "research" div class="container-fluid">
+<div class = 'row-fluid top-buffer'>
+<div class="col-xs-12 col-sm-3  col-md-offset-1">
+<h3>+ Research</h3>
+</div>
+
+<div class="col-xs-12 col-sm-8">
+ <p>I am primarily interested in using statistics to understand complex phenomena. I also like using cross-disciplinary methods to solving problems. My research experience thus far has largely been focused on statistical modeling, big data applications, and quantitative finance.</p>
+
+<p><strong>What I&#8217;m currently working on:</strong></p>
+<ul>
+<li>Solving the closed end fund puzzle</li>
+<li>Adaptive signal processing in the context of economic applications</li>
+<li>Quantifying political polarity and its effect on financial markets</li>
+</ul>
+<br/>
+</div>
+</div>
+</div>
+
+<div id = "projects" div class="container-fluid">
+<div class = 'row-fluid top-buffer'>
+<div class="col-xs-12 col-sm-3  col-md-offset-1">
+<h3>+ Projects</h3>
+</div>
+
+<div class="col-xs-12 col-sm-8">
+<p>Below is a list of some of the previous projects I have worked on.</p>
+
+<p>(Full length papers can be found under the Publications section.)</p>
+<div class = 'row'>
+<div class = 'col-sm-2 vcenter'> 
+<img src="images/corrplot.png" class="ratio hover-shadow" width=235>
+</div><!--
+--><div class = 'col-sm-7 col-md-offset-2 vcenter'>
+<p><u><strong>Forecasting:</strong></u></p>
+<ul>
+<li>Combine traditional factor models and neural networks to model asset returns</li>
+<li>Forecast S&amp;P 500 market movements using Google search data</li>
+<li>Construct a novel metric to compute future recession probabilities</li>
+<li>Predict Australian electricity price spikes</li>
+</ul>
+<center><p><small><i><strong>[To the left]</strong> Correlation matrix of Google Trend terms.</i></small></p></center>
+</div>
+</div>
+<br/>
+<div class = 'row'>
+<div class = 'col-sm-7 vcenter'>
+<p><u><strong>Economics: </strong></u></p>
+<ul>
+<li>Define &#8220;coherence&#8221; within New York Times articles using topic modeling algorithms as a proxy for sentiment towards economy</li>
+<li>Measure the &#8220;Olympic Effect&#8221;</li>
+<li>Quantify spillover effect in electricty markets</li>
+<li>Apply entropy analysis to model bifurcations within the economy</li>
+</ul>
+<p><small><i><strong>[To the right]</strong> An illustration of the workflow of converting unstructured New York Times articles into a metric that can be used to forecast recessions.</i></small></p>
+</div><!--
+--><div class = 'col-sm-2 vcenter'> 
+<img src="images/lda_workflow.png" class="hover-shadow" width=235>
+</div>
+</div>
+<br/>
+
+<div class = 'row'>
+<div class = 'col-sm-2 vcenter'> 
+<img src="images/entropy.gif" class="hover-shadow" width=223>
+</div><!--
+--><div class = 'col-sm-7 col-md-offset-2 vcenter'>
+<p><u><strong>Miscellaneous:</strong></u></p>
+<ul>
+<li>Predict lesion growth using MRI scans using ensemble learning methods and synthetic minority oversampling techniques</li>
+<li>Code image classification and codebook optimization algorithms</li>
+<li>Develop recommender system using Python</li>
+</ul>
+<center><p><small><i><strong>[To the left]</strong> Entropy maps of different states of the economy.</i></small></p></center>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Container (Publications) -->
+<div id = "publications" div class="container-fluid">
+<div class = 'row-fluid top-buffer'>
+<div class="col-xs-12 col-sm-3  col-md-offset-1">
+<h3>+ Publications</h3>
+</div>
+
+<div class="col-xs-12 col-sm-8">
+  
+<p>Below are a list of publications and working papers thus far.</p> 
+<h4><strong>Forecasting Australian Electricity Spikes</strong></h4>
+<em>Working paper, draft available upon request.</em> <br />
+<strong>Abstract:</strong> There currently exists a huge body of contemporaneous literature that focuses on forecasting intraday electricity spot prices. However, understanding the presence of electricity price spikes and how to successfully forecast the probabilities of these spikes occurring throughout time has been somewhat limited. Previous studies in this area have relied primarily on load forecasts, proxies for demand, and historical prices as exogenous variables. In our paper, we examine the characteristics of electricity price spikes in Australian electricity markets and observe a decoupling effect with the high spikes and demand for electricity. We find that there exists a relationship between the occurrences of spikes from one market onto other markets, and use this notion of a spillover effect to successfully forecast probabilities of electricity price surges with extremely high accuracy rates, outperforming several known pre-existing models.</p>
+<br />
+
+
+<h4><strong><a href = "https://www.dropbox.com/s/pm6aq7ja70gl1p2/AssetReturnsANN.pdf?dl=0">Asset Returns and Neural Networks</a></h4>
+</strong><em>Submitted to the Journal of Applied Statistics, July 2017</em><br />
+<strong>Abstract:</strong> Traditional factor models within the realm of asset pricing often rely on a linear framework to model asset returns. We find that the imposed linear and additive restrictions of a linear regression framework in Fama-French’s factor models fail model specification tests, and show signs of structural breaks at different time periods. We propose using a feedforward neural network, with Fama-French’s five factors as inputs, to capture the nonlinear dynamics to better model asset returns, and find that our proposed methodology shows significant improvements in performance over the traditional Fama-French factor models.</p>
+<br />
+
+<h4><strong><a href = "https://www.dropbox.com/s/uy3yw35egcap1bx/ModelingStockMarketswithGoogleTrends.pdf?dl=0">Modeling Stock Market Movements using Google Trends</a></h4>
+</strong><em>Submitted to the Journal of Applied Statistics, May 2017<br />
+Presented at the annual Board of Visitors Alumni and Friends Reception 2017</em><br />
+<strong><a href="https://www.dropbox.com/s/731eztiitim9hmx/GoogleTrend_Poster.pdf?dl=0">[Poster]</a></strong><br />
+<strong>Abstract:</strong> Previous studies have proposed using Google Trend data as buy and sell signals for trading. We find from backtesting that using these proposed trading strategies fails to consistently generate positive returns. Instead, we use a Granger causal framework to examine the potential predictive capabilities of using the relative volume of Google searches for different terms in forecasting the S&amp;P 500. We apply Kaplan-Meier estimator to quantify the level of persistence in lagged correlation between the two series. We find that the stock market series and search trend data show high levels of persistence in their relationship with one another. We propose several generalized linear models for forecasting the probability of positive or negative directional movements in the S&amp;P 500 using the relative search volume of different terms. We then generate directional forecasts within our backtesting period, with a success rate of 64%.</p>
+<br />
+
+<h4><strong><a href="https://www.dropbox.com/s/2lnyqoppljgz63r/IntertopicDistancesAsRecessionPredictors.pdf?dl=0">Intertopic Distances as Leading Indicators</a></h4>
+</strong><em>Submitted to the Journal of Forecasting, March 2017</em><br/>
+<em>Nominated by department to present at UCLA&#8217;s Undergraduate Research Week 2017</em><br/>
+<strong><a href="https://www.dropbox.com/s/imjum8shw83j51v/IntertopicDistance_Poster.pdf?dl=0">[Poster]</a> </strong>[Slides available upon request]<br />
+<strong>Abstract:</strong> During periods of recessions, topics within news articles about the economy tend to be clustered with one another, while during periods of economic upswings, topics within news articles about the economy tend to be less related. We hypothesize that like sentiment analysis, measuring coherence within the media can yield insightful predictions in both financial markets and the economy as a whole. We apply the Latent Dirichlet Allocation algorithm on a corpus of New York Times articles from the last two decades, and estimate topic distributions within 30-day periods. From the Jensen-Shannon distances between estimated topics, we construct two novel metrics from which we measure strong correlation with financial indices. Additionally, we find that these metrics can be used as leading indicators for estimating the probability of being in a recession, and propose a vector autoregressive model containing these metrics that is able to outperform traditional, recession probability models.</p>
+<br/>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="text-left">
+  <a class="up-arrow" href="#home" data-toggle="tooltip">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Copyright Melody Huang, 2017.</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+   $('[data-toggle="tooltip"]').tooltip({
+      animated:'fade', 
+      placement: 'bottom', 
+      html: true
+   }); 
+})
+</script>
+
+</body>
+</html>
