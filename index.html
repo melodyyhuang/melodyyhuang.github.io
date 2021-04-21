@@ -4,273 +4,455 @@
   <title>Melody Y. Huang</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:300, 400, 500, 600, 700" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.7/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
 
   <style>
-  body {
-      font-family: 'Zilla Slab', serif;
-      font-size: 16px;
-      letter-spacing: 0.5px;
-      color: #807F84;
-      font-weight: 300;
-  }
-  strong{
-  	color: #000000;
-  	font-weight: 400;
-  }
-  h3 {
+    .light-theme {
+        --fontColor: #807F84;
+        --navBg: #fff;
+        --mainBg: #fff;
+        --strongColor: #000000;
+        --navLink: #45618E;
+        --navHover: #8BC8E8;
+        --navActive: #29292c;
+        --footerBg: #fff;
+        --footerColor: #45618E;
+        --buttonColor: #45618E;
+    }
+
+    .dark-theme{
+        --fontColor: #d1d1d1;
+        --navBg: #303030;
+        --mainBg: #303030;
+        --strongColor: #fff;
+        --navLink: #b8f1ff;
+        --navHover: #45618E;
+        --navActive: #29292c;
+        --footerBg: #303030;
+        --footerColor: #fff;
+        --buttonColor: #b8f1ff;
+    }
+:root {
+  --navHeight: 70px;
+}
+
+.switch {
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.switch div {
+  position: relative;
+  display: block;
+  background: #eee;
+  width: 30px;
+  border-radius: 50px;
+  padding: 2.5px 5px 0px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.fa-adjust {
+  transform: rotate(180deg);
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #999;
+  transition: 0.4s;
+  border-radius: 34px;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  position: relative;
+}
+
+input:checked + .slider {
+  transform: translateX(8px);
+}
+
+nav {
+  background: #d2cca1;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  height: var(--navHeight);
+  padding: 0 10px;
+}
+
+nav ul li {
+  padding: 12px 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 4px;
+  position: relative;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  background: #e5c687;
+  height: calc(100vh - var(--navHeight));
+}
+    strong{
+        color: var(--strongColor);
+        font-weight: 400;
+    }
+    h3 {
       margin: 0px 0 0px 0;
       letter-spacing: 2px;
       font-size: 20px;
-      color: #111;
+      color: var(--strongColor);
       font-family: 'Zilla Slab', serif;
   }
   h4 {
       margin: 0px 0 0px 0;
       letter-spacing: 2px;
       font-size: 17px;
-      color: #111;
+      color: var(--strongColor);
       font-family: 'Zilla Slab', serif;;
   }
   body{
-  	padding-top: 90px;
-  }
-  .container-fluid {
-  	padding-top: 60px;
-  	padding-left: 80px;
-  	padding-right: 80px;
-      text-align: left;
-  }
-  .top-buffer { margin-top:90px; }
-  .top-buffer2 { margin-top:50px; }
-  .bg-1 {
-      background: #2d2d30;
-      color: #bdbdbd;
-  }
-  .bg-1 h3 {color: #fff;}
-  .bg-1 p {font-style: italic;}
-  .list-group-item:first-child {
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
-  }
-  .navbar {
-      font-family: 'Zilla Slab', serif;
-      font-weight: 500 !important;
-      margin-bottom: 0;
-      margin-top: 0;
-      border: 0;
-      background-color: #fff;
-      font-size: 12px !important;
-      letter-spacing: 3.8px;
-      opacity: 0.9;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #45618E !important;
-  }
-  .navbar-nav li a:hover {
-      color: #8BC8E8 !important; /*light blue*/
-  }
-  .navbar-default li.active a {
-      color: #29292c;
-      background-color: #fff;
-  }
+    padding-top: 90px;
+    font-family: 'Zilla Slab', serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: var(--fontColor);
+    font-weight: 300;
+    background: var(--mainBg);
+ }
+ a{
+    color: var(--navLink);
+}
+a:hover{
+    color: var(--navHover);
+}
+.container-fluid {
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
+    text-align: left;
+}
+.top-buffer { margin-top:90px; }
+.top-buffer2 { margin-top:50px; }
+.bg-1 {
+  background: #2d2d30;
+  color: #bdbdbd;
+}
+.bg-1 h3 {color: var(--mainBg);}
+.bg-1 p {font-style: italic;}
+.list-group-item:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.navbar {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 500 !important;
+  margin-bottom: 0;
+  margin-top: 0;
+  border: 0;
+  background-color: var(--navBg);
+  font-size: 12px !important;
+  letter-spacing: 3.8px;
+  opacity: 0.9;
+}
+.navbar li a, .navbar .navbar-brand {
+  color: var(--navLink) !important;
+}
+.navbar-nav li a:hover {
+  color: var(--navHover) !important; /*light blue*/
+}
+.navbar-default li.active a {
+  color: var(--navActive);
+  background-color: var(--bkg-color);
+}
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
- a:hover, .navbar-default .navbar-nav > .active > a:focus {
+a:hover, .navbar-default .navbar-nav > .active > a:focus {
   /*BACKGROUND color for active*/
-  background-color: white;
+  background-color: var(--navBg);
 }
 .navbar-default .navbar-nav>.active>a, .navbar-nav>.active>a:hover, .navbar-nav>.active>a:focus {
   font-weight: 800;
 }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-  }
-  footer {
-      background-color: #fff;
-      color: #45618E;
-      padding-bottom: 20px;
-      padding-left: 20px;
-      padding-right: 20px;
-  }
-  footer a {
-      color: #000000;
-  }
-  footer a:hover {
-      color: #777;
-      text-decoration: none;
-  }
-  .form-control {
-      border-radius: 0;
-  }
-  textarea {
-      resize: none;
-  }
-  .material-icons, .icon-text {
-      vertical-align: text-bottom;
-    }
-  .vcenter {
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+footer {
+  background-color: var(--footerBg);
+  color: var(--footerColor);
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+footer a {
+  color: var(--strongColor);
+}
+footer a:hover {
+  color: var(--navHover);
+  text-decoration: none;
+}
+.form-control {
+  border-radius: 0;
+}
+textarea {
+  resize: none;
+}
+.material-icons, .icon-text {
+  vertical-align: text-bottom;
+}
+.vcenter {
     display: inline-block;
     vertical-align: middle;
     float: none;
-  }
-  .borderexample
-  {
+}
+.borderexample
+{
     border-style:solid;
     border-width:1px;
     border-color:#000;
-  }
-  .active,
-  .demo:hover {
+}
+.active,
+.demo:hover {
     opacity: 1;
-  }
-  img.hover-shadow {
+}
+img.hover-shadow {
     transition: 0.3s
-  }
-  .hover-shadow:hover {
+}
+.hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05)
     -webkit-transform:scale(1.19); /* Safari and Chrome */
     -moz-transform:scale(1.19); /* Firefox */
     -ms-transform:scale(1.19); /* IE 9 */
     -o-transform:scale(1.19); /* Opera */
-     transform:scale(1.19);
-  }
-  div{
+    transform:scale(1.19);
+}
+div{
     max-width: 1350px;
-  }
-  </style>
-</head>
-<body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
+}
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#myPage">Melody Y. Huang</a>
+#hiddenContent {
+    display: none;
+}
+.button_click {
+  border: none;
+  background: none;
+  padding:0;
+  font-size: 16px;
+  color: var(--buttonColor);
+}
+.button_click:hover{
+    color: var(--navHover);
+}
+
+/*PROGRESS BAR */
+/* Style the header: fixed position (always stay at the top) */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: var(--mainBg);
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: var(--navHover);
+  width: 0%;
+}
+
+</style>
+}
+</head>
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="50" class = 'light-theme'>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#myPage">Melody Y. Huang</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#home">HOME</a></li>
         <li><a href="#research">RESEARCH</a></li>
-        <li><a href="#talks">TALKS</a></li>
         <li><a href="#papers">PAPERS</a></li>
+        <li><a href="#talks">TALKS</a></li>
         <li><a href=https://www.dropbox.com/s/bsj1hlmrq3ftxpc/MelodyHuang_CV.pdf?dl=0 target="_blank">CV</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+        <li>
+            <label class="switch">
+            <i class="material-icons" style='font-size:20px'>wb_sunny</i>
+            <div>
+            <input type='checkbox' />
+              <span class="slider round"></span>
+            </div>
+          </label>
+        </li>
+    </ul>
+</div>
 
+</div>
+</nav>
 
 <!-- Container (First Portion) -->
 <div class="container-fluid top-buffer2">
-<div class = 'row-fluid'>
-<div class="col-xs-12 col-sm-3 col-md-offset-1">
-<h3>+ Welcome!</h3>
-</div>
+    <div class = 'row-fluid'>
+        <div class="col-xs-12 col-sm-3 col-md-offset-1">
+            <h3>+ Welcome!</h3>
+        </div>
 
-<div class="col-xs-12 col-sm-8">
-<div class = 'row'>
-<div class = 'col-sm-2 img-circle vcenter'>
-<img src="images/DSC_6778.jpg" class="ratio img-circle" width=170>
+        <div class="col-xs-12 col-sm-8">
+            <div class = 'row'>
+                <div class = 'col-sm-2 img-circle vcenter'>
+                    <img src="images/DSC_6778.jpg" class="ratio img-circle" width=170>
 </div><!--
 --><div class = 'col-sm-7 col-md-offset-2 vcenter'>
-<p><strong>Hi, my name is Melody!</strong></p>
-<!-- <p>Attempting to measure life with <a href="https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock" target="_blank">coffee spoons</a> and a lot of big data.</p> -->
-<p><a href="mailto:m.huang@ucla.edu"><i class="material-icons" style='font-size:20px'>mail_outline</i></a> Email: m.huang [<strong>asperand</strong>] ucla.edu</p>
+    <p><strong>Hi, my name is Melody!</strong></p>
+    <!-- <p>Attempting to measure life with <a href="https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock" target="_blank">coffee spoons</a> and a lot of big data.</p> -->
+    <p><a href="mailto:m.huang@ucla.edu"><i class="material-icons" style='font-size:20px'>mail_outline</i></a> Email: m.huang [<strong>asperand</strong>] ucla.edu</p>
 <!-- <p><a href="http://www.twitter.com/melodyyhuang" target='blank'><i class="fa fa-twitter" style='font-size:18px'></i></a> Twitter: <a href= "http://www.twitter.com/melodyyhuang" target='blank'>@melodyyhuang </a></p>
- --></div>
+--></div>
 </div>
 
 <br />
 <h4><u>About Me</u> </h4>
 <p>I'm currently a Statistics Ph.D. student at UCLA working with <strong><a href = "https://www.erinhartman.com/"  target="_blank">Prof. Erin Hartman</a></strong>. I am interested in developing statistical methods to understand causality and complex phenomena. I'm currently working on methods to efficiently generalize experimental results to different populations.</p>
 
-<p>This past summer, I worked at RAND with Lane Burgette, Brian Vegetabile, and the causal tools group to improve covariate balancing methods. In 2019, I spent the summer working at <strong>Google</strong> with Reid Oda and the quantitative UX research group. I received my B.S. in <strong>Mathematics & Economics</strong> with a specialization in computing from <strong>UCLA</strong> in 2017. </p>
+<p>During the summer of 2020, I worked at <strong>the RAND Corporation</strong> with Lane Burgette, Brian Vegetabile, and the causal tools group to improve covariate balancing methods. In 2019, I spent the summer working at <strong>Google</strong> with Reid Oda and the quantitative UX research group. I received my B.S. in <strong>Mathematics & Economics</strong> with a specialization in computing from <strong>UCLA</strong> in 2017. </p>
+
+<p>Outside of statistics, I spend my time thinking about coffee beans, how it's not fair that women can't safely run at night, and optimizing my Stardew Valley farm.</p>
+
 </div>
 </div>
 </div>
+
+
+      <!-- Container (Publications) -->
+      <div id = "papers" div class="container-fluid">
+        <div class = 'row-fluid top-buffer'>
+            <div class="col-xs-12 col-sm-3  col-md-offset-1">
+                <h3>+ Papers</h3>
+            </div>
+
+            <div class="col-xs-12 col-sm-8">
+
+                <p> <strong>Leveraging Observational Outcomes to Improve the Generalization of Experimental Results</strong>
+                    <br>
+                    with Naoki Egami, Erin Hartman, and Luke Miratrix
+                </p>
+
+                <p> <strong>Design and Analysis of Experiments with Non-Compliance under Principal Ignorability</strong>
+                    <br>
+                    with Erin Hartman <br>
+
+                    <button class="button button_click" onclick="clickToShow()">[Abstract]</button> </p>
+
+                    <div id="hiddenContent">
+                        <p>Even in the best-designed experiment, noncompliance with treatment assignment can complicate analysis.  Under one-way noncompliance, researchers typically rely on an instrumental variables approach, under an exclusion restriction assumption, to identify the complier average causal effect (CACE).  This approach suffers from high variance, particularly when the experiment has a low compliance rate. The following paper suggests blocking designs that can help overcome precision losses in the face of high rates of noncompliance in experiments when a placebo-controlled design is infeasible. We also introduce the principal ignorability assumption and a class of principal score weighted estimators, which are largely absent from the experimental political science literature.  We then introduce the ''block principal ignorability'' assumption which, when combined with a blocking design, suggests a simple difference-in-means estimator for estimating the CACE.  We show that blocking can improve precision of both IV and principal score weighting approaches, and further show that our simple, design-based solution has superior performance to both principal score weighting and instrumental variables under blocking.  Finally, in a re-evaluation of the Gerber, Green, and Nickerson (2003) study, we find that blocked, principal ignorability approaches to estimation of the CACE, including our blocked difference-in-means and principal score weighting estimators, result in confidence intervals roughly half the size of traditional instrumental variable approaches.</p>
+                    </div>
+
+                    <p> Pre-PhD Work </p>
+                    <p> <strong>Modeling Stock Market Movements using Google Trends</strong>, Empirical Economics (June 2019),
+                        <br>
+                        with Randall R. Rojas and Patrick Convery
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
 
 <div id = "talks" div class="container-fluid">
-<div class = 'row-fluid top-buffer'>
-<div class="col-xs-12 col-sm-3  col-md-offset-1">
-<h3>+ Talks</h3>
-</div>
+    <div class = 'row-fluid top-buffer'>
+        <div class="col-xs-12 col-sm-3  col-md-offset-1">
+            <h3>+ Talks</h3>
+        </div>
 
-<div class="col-xs-12 col-sm-8">
-<p><strong>Designs and Considerations in Experiments with Low Compliance Rates</strong><br>
-36th Annual Meeting of the Society for Political Methodology (July 2019)</p>
-<p><strong>Practical Guidance for Dealing with Non-Compliance in Experiments</strong><br>
-Google Ph.D. Research Conference (July 2019)</p>
-<p><strong>Modeling Stock Market Movements using Google Trends</strong><br>
-26th Symposium of the Society of Nonlinear Dynamics and Econometrics (March 2018)</p>
-<br/>
-</div>
-</div>
-</div>
+        <div class="col-xs-12 col-sm-8">
+            <p><strong>Leveraging Observational Outcomes to Improve the Generalization of Experimental Results</strong><br>
+                <ul>
+                  <li>Harvard Experimental Political Science Conference (April 2021)</li>
+                  <li>Harvard University, Miratrix C.A.R.E.S. Lab (December 2020)</li>
+                  <li>37th Annual Meeting of the Society for Political Methodology (July 2020) (Poster)<br>
+                    <em>Awarded Society of Political Methodology Best Graduate Student Poster in Methods</em> </li>
+                    <li> RAND Statistics Group, Invited Brown Bag (July 2019) </li>
+                </ul>
+            </p>
+            <p><strong>Balancing Higher Moments Matter for Causal Estimation</strong>
+                <ul>
+                  <li>RAND Center for Causal Inference (September 2020)</li>
+              </ul>
+              <p><strong>Designs and Considerations in Experiments with Low Compliance Rates</strong><br></p>
+              <ul>
+                  <li>36th Annual Meeting of the Society for Political Methodology (July 2019) (Poster)</li>
+                  <li>Google Ph.D. Research Conference (July 2019) (Poster)</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
 
-
-<!-- Container (Publications) -->
-<div id = "papers" div class="container-fluid">
-<div class = 'row-fluid top-buffer'>
-<div class="col-xs-12 col-sm-3  col-md-offset-1">
-<h3>+ Papers</h3>
-</div>
-
-<div class="col-xs-12 col-sm-8">
-
-<p> <strong>Leveraging Observational Outcomes to Improve the Generalization of Experimental Results</strong>
-    <br>
-    with Naoki Egami, Erin Hartman, and Luke Miratrix
-</p>
-
-<p> <strong>Design and Analysis of Experiments with Non-Compliance under Principal Ignorability</strong>
-    <br>
-    with Erin Hartman
-</p>
-
-<p> Pre-PhD Work </p>
-<p> <strong>Modeling Stock Market Movements using Google Trends</strong>, Empirical Economics (June 2019),
-    <br>
-    with Randall R. Rojas and Patrick Convery
-</p>
-
-</div>
-</div>
-</div>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class='container text-left col-sm-6'>
-    <a class="up-arrow" href="#home" data-toggle="tooltip">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-    </a><br><br>
-    <p>Copyright Melody Huang, 2018.</p>
-  </div>
-<div class = 'container text-right col-sm-6'>
-  <br><br>
-  <p><a href="http://www.twitter.com/melodyyhuang" target='blank'><i class="fa fa-twitter" style='font-size:18px'></i></a> &nbsp
-     <a href="https://www.linkedin.com/in/melodyyhuang/" target='blank'><i class="fa fa-linkedin" style='font-size:18px'></i></a> &nbsp
-     <a href="https://github.com/melodyyhuang" target='blank'><i class="fa fa-github" style='font-size:18px'></i></a>
-  </p>
-</div>
+        <!-- Footer -->
+        <footer class="footer">
+          <div class='container text-left col-sm-6'>
+            <a class="up-arrow" href="#home" data-toggle="tooltip">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a><br><br>
+            <p>Copyright Melody Huang, 2018.</p>
+        </div>
+        <div class = 'container text-right col-sm-6'>
+          <br><br>
+          <p><a href="http://www.twitter.com/melodyyhuang" target='blank'><i class="fa fa-twitter" style='font-size:18px'></i></a> &nbsp
+           <a href="https://www.linkedin.com/in/melodyyhuang/" target='blank'><i class="fa fa-linkedin" style='font-size:18px'></i></a> &nbsp
+           <a href="https://github.com/melodyyhuang" target='blank'><i class="fa fa-github" style='font-size:18px'></i></a>
+       </p>
+   </div>
 </footer>
 
 <script>
-$(document).ready(function(){
+    $(document).ready(function(){
   // Initialize Tooltip
   $('[data-toggle="tooltip"]').tooltip();
 
@@ -286,20 +468,50 @@ $(document).ready(function(){
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 900, function(){
+    }, 900, function(){
 
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
-      });
+    });
     } // End if
-  });
-   $('[data-toggle="tooltip"]').tooltip({
+});
+  $('[data-toggle="tooltip"]').tooltip({
       animated:'fade',
       placement: 'bottom',
       html: true
-   });
+  });
 })
 </script>
 
+<script>
+  function clickToShow() {
+      var x = document.getElementById("hiddenContent");
+      if (x.style.display !== "block") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<script>
+const themeSwitch = document.querySelector('input');
+themeSwitch.addEventListener('change', () => {
+  document.body.classList.toggle('dark-theme');
+});
+</script>
+
+<script>
+// When the user scrolls the page, execute trackScroll
+window.onscroll = function() {trackScroll()};
+
+function trackScroll() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+</script>
 </body>
 </html>
