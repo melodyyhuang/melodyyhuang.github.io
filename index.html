@@ -10,11 +10,18 @@
   <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:300, 400, 500, 600, 700" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.7/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.7/jquery.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 
   <style>
     .light-theme {
@@ -297,6 +304,18 @@ div{
   width: 0%;
 }
 
+
+/* image */
+img {
+    filter: grayscale(25%);
+    -webkit-filter: grayscale(25%);
+}
+
+img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
 </style>
 }
 </head>
@@ -319,8 +338,8 @@ div{
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#home">HOME</a></li>
         <li><a href="#research">RESEARCH</a></li>
-        <li><a href="#talks">TALKS</a></li>
         <li><a href="#papers">PAPERS</a></li>
+        <li><a href="#talks">TALKS</a></li>
         <li><a href=https://www.dropbox.com/s/bsj1hlmrq3ftxpc/MelodyHuang_CV.pdf?dl=0 target="_blank">CV</a></li>
         <li>
             <label class="switch">
@@ -347,7 +366,7 @@ div{
         <div class="col-xs-12 col-sm-8">
             <div class = 'row'>
                 <div class = 'col-sm-2 img-circle vcenter'>
-                    <img src="images/DSC_6778.jpg" class="ratio img-circle" width=170>
+                    <img src="images/IMG_0359 copy.jpg" class="img-circle" width=180>
 </div><!--
 --><div class = 'col-sm-7 col-md-offset-2 vcenter'>
     <p><strong>Hi, my name is Melody!</strong></p>
@@ -363,11 +382,73 @@ div{
 
 <p>During the summer of 2020, I worked at <strong>the RAND Corporation</strong> with Lane Burgette, Brian Vegetabile, and the causal tools group to improve covariate balancing methods. In 2019, I spent the summer working at <strong>Google</strong> with Reid Oda and the quantitative UX research group. I received my B.S. in <strong>Mathematics & Economics</strong> with a specialization in computing from <strong>UCLA</strong> in 2017. </p>
 
-<p>Outside of statistics, I spend my time thinking about coffee beans, how it's not fair that women can't safely run at night, and knitting.</p>
+<p>Outside of statistics, I spend my time thinking about coffee beans, how it's not fair that women can't safely run at night, and optimizing my Stardew Valley farm.</p>
 
 </div>
 </div>
 </div>
+
+      <!-- Container (Publications) -->
+      <div id = "papers" div class="container-fluid">
+        <div class = 'row-fluid top-buffer'>
+            <div class="col-xs-12 col-sm-3  col-md-offset-1">
+                <h3>+ Papers</h3>
+            </div>
+
+            <div class="col-xs-12 col-sm-8">
+                 <p> <strong>Sensitivity Analysis in the Generalization of Experimental Results</strong><br>
+
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#SA_abstract" aria-expanded="false" aria-controls="SA_abstract">
+                    Abstract
+                  </button>
+                  <div class="collapse" id="SA_abstract">
+                  <div class="card card-body">
+                    Randomized control trials (RCT’s) allow researchers to estimate causal effects in an experimental sample with minimal identifying assumptions. However, to generalize a causal effect from an RCT to a target population, researchers must adjust for a set of treatment effect moderators. In practice, it is impossible to know whether the set of moderators has been properly accounted for.  In the following paper, I propose a three parameter sensitivity analysis for the generalization of experimental results using weighted estimators, with several advantages over existing methods. First, the framework does not require any parametric assumption on either the selection or treatment effect heterogeneity mechanism. Second, I show that the sensitivity parameters are guaranteed to be bounded and propose (1) a diagnostic for researchers to determine how robust a point estimate is to killer confounders, and (2) an adjusted calibration approach for researchers to accurately benchmark the parameters using existing data. Finally, I demonstrate that the proposed framework can be easily extended to the class of doubly robust, augmented weighted estimators. The sensitivity analysis framework is applied to a set of Jobs Training Program experiments.
+                  </div><br>
+                </div>
+
+                </p>
+
+
+
+                <p> <strong>Leveraging Observational Outcomes to Improve the Generalization of Experimental Results</strong>
+                    <br>
+                    with Naoki Egami, Erin Hartman, and Luke Miratrix<br>
+
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#recycle_abstract" aria-expanded="false" aria-controls="recycle_abstract">
+                    Abstract
+                  </button>
+                  <div class="collapse" id="recycle_abstract">
+                  <div class="card card-body">
+                    Randomized control trials are often considered the gold standard in causal inference due to their high internal validity. Despite its importance, generalizing experimental results to a target population is challenging in social and biomedical sciences. Recent papers clarify the assumptions necessary for generalization and develop various weighting estimators for the population average treatment effect (PATE). However, in practice, many of these methods result in large variance and little statistical power, thereby limiting the value of the PATE inference. In this article, we propose post-residualized weighting, in which information about the outcome measured in the observational population data is used to improve the efficiency of many existing popular methods without making additional assumptions. We empirically demonstrate the efficiency gains through simulations and apply our proposed method to a set of jobs training program experiments.
+                  </div><br>
+                </div>
+
+                </p>
+
+                <p> <strong>Design and Analysis of Experiments with Non-Compliance under Principal Ignorability</strong>
+                    <br>
+                    with Erin Hartman <br>
+
+ <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#compliance_abstract" aria-expanded="false" aria-controls="compliance_abstract">
+                    Abstract
+                  </button>
+                  <div class="collapse" id="compliance_abstract">
+                  <div class="card card-body">
+                    Even in the best-designed experiment, noncompliance with treatment assignment can complicate analysis.  Under one-way noncompliance, researchers typically rely on an instrumental variables approach, under an exclusion restriction assumption, to identify the complier average causal effect (CACE).  This approach suffers from high variance, particularly when the experiment has a low compliance rate. The following paper suggests blocking designs that can help overcome precision losses in the face of high rates of noncompliance in experiments when a placebo-controlled design is infeasible. We also introduce the principal ignorability assumption and a class of principal score weighted estimators, which are largely absent from the experimental political science literature.  We then introduce the ''block principal ignorability'' assumption which, when combined with a blocking design, suggests a simple difference-in-means estimator for estimating the CACE.  We show that blocking can improve precision of both IV and principal score weighting approaches, and further show that our simple, design-based solution has superior performance to both principal score weighting and instrumental variables under blocking.  Finally, in a re-evaluation of the Gerber, Green, and Nickerson (2003) study, we find that blocked, principal ignorability approaches to estimation of the CACE, including our blocked difference-in-means and principal score weighting estimators, result in confidence intervals roughly half the size of traditional instrumental variable approaches.<br>
+                  </div>
+                </div>
+                <br>
+
+                    <p> Pre-PhD Work </p>
+                    <p> <strong>Modeling Stock Market Movements using Google Trends</strong>, Empirical Economics (June 2019),
+                        <br>
+                        with Randall R. Rojas and Patrick Convery
+                    </p>
+
+                </div>
+            </div>
+        </div>
 
 
 <div id = "talks" div class="container-fluid">
@@ -398,41 +479,6 @@ div{
               </div>
           </div>
       </div>
-  
-      <!-- Container (Publications) -->
-      <div id = "papers" div class="container-fluid">
-        <div class = 'row-fluid top-buffer'>
-            <div class="col-xs-12 col-sm-3  col-md-offset-1">
-                <h3>+ Papers</h3>
-            </div>
-
-            <div class="col-xs-12 col-sm-8">
-
-                <p> <strong>Leveraging Observational Outcomes to Improve the Generalization of Experimental Results</strong>
-                    <br>
-                    with Naoki Egami, Erin Hartman, and Luke Miratrix
-                </p>
-
-                <p> <strong>Design and Analysis of Experiments with Non-Compliance under Principal Ignorability</strong>
-                    <br>
-                    with Erin Hartman <br>
-
-                    <button class="button button_click" onclick="clickToShow()">[Abstract]</button> </p>
-
-                    <div id="hiddenContent">
-                        <p>Even in the best-designed experiment, noncompliance with treatment assignment can complicate analysis.  Under one-way noncompliance, researchers typically rely on an instrumental variables approach, under an exclusion restriction assumption, to identify the complier average causal effect (CACE).  This approach suffers from high variance, particularly when the experiment has a low compliance rate. The following paper suggests blocking designs that can help overcome precision losses in the face of high rates of noncompliance in experiments when a placebo-controlled design is infeasible. We also introduce the principal ignorability assumption and a class of principal score weighted estimators, which are largely absent from the experimental political science literature.  We then introduce the ''block principal ignorability'' assumption which, when combined with a blocking design, suggests a simple difference-in-means estimator for estimating the CACE.  We show that blocking can improve precision of both IV and principal score weighting approaches, and further show that our simple, design-based solution has superior performance to both principal score weighting and instrumental variables under blocking.  Finally, in a re-evaluation of the Gerber, Green, and Nickerson (2003) study, we find that blocked, principal ignorability approaches to estimation of the CACE, including our blocked difference-in-means and principal score weighting estimators, result in confidence intervals roughly half the size of traditional instrumental variable approaches.</p>
-                    </div>
-
-                    <p> Pre-PhD Work </p>
-                    <p> <strong>Modeling Stock Market Movements using Google Trends</strong>, Empirical Economics (June 2019),
-                        <br>
-                        with Randall R. Rojas and Patrick Convery
-                    </p>
-
-                </div>
-            </div>
-        </div>
-
 
         <!-- Footer -->
         <footer class="footer">
@@ -483,9 +529,14 @@ div{
 })
 </script>
 
-<script>
-  function clickToShow() {
+<!-- <script>
+  $('.collapse').collapse()
+</script> -->
+<!-- <script>
+function clickToShow() {
+    //
       var x = document.getElementById("hiddenContent");
+      //var x= document.getElementsByClassName('hiddenContent')
       if (x.style.display !== "block") {
         x.style.display = "block";
     } else {
@@ -493,7 +544,7 @@ div{
     }
 }
 </script>
-
+ -->
 <script>
 const themeSwitch = document.querySelector('input');
 themeSwitch.addEventListener('change', () => {
@@ -513,5 +564,7 @@ function trackScroll() {
 }
 
 </script>
+
+
 </body>
 </html>
